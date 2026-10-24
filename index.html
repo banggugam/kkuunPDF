@@ -55,10 +55,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;color:var(--ink);text-decoration:none;justify-self:start}
 .logo img{width:30px;height:30px}
 .tabs{display:flex;gap:4px}
-.tab{font:inherit;font-size:15px;font-weight:500;color:var(--muted);background:none;border:0;border-radius:8px;padding:7px 14px;cursor:pointer}
+.tab{white-space:nowrap;font:inherit;font-size:15px;font-weight:500;color:var(--muted);background:none;border:0;border-radius:8px;padding:7px 14px;cursor:pointer}
 .tab:hover{background:var(--card);color:var(--ink)}
 .tab[aria-selected="true"]{color:var(--ink);background:var(--card)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;text-decoration:none;
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;text-decoration:none;
   color:#fff;background:var(--blue);border-radius:10px;padding:12px 22px;font-size:16px;transition:background .15s ease}
 .btn:hover{background:var(--blue-dark)}
 .btn.sm{padding:8px 14px;font-size:14px;border-radius:8px;justify-self:end}
@@ -124,10 +124,16 @@ footer a{color:inherit}
   .bar .wrap{grid-template-columns:auto 1fr auto}
   .tabs{justify-self:center}
   .logo span{display:none}
+  .bar .wrap{gap:8px;height:56px;grid-template-columns:30px 1fr auto}
+  .logo img{flex:none}
+  .tabs{gap:2px}
+  .tab{padding:6px 10px;font-size:14px}
+  .btn.sm{padding:7px 12px;font-size:13px}
   .grid,.trio{grid-template-columns:1fr}
   .card.wide{grid-template-columns:1fr}
   .card.wide .t{padding-bottom:0}
 }
+@media (max-width:360px){.tab{padding:6px 7px;font-size:13px}.btn.sm{padding:7px 10px}}
 @media (prefers-reduced-motion:reduce){.btn,.qitem summary::after{transition:none}}
 </style>
 </head>
