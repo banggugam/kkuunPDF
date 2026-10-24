@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>kkuunPDF · 맥용 무료 PDF 편집기 · PDF 필기 앱</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지.">
-<meta name="keywords" content="PDF 편집기, PDF 편집 앱, PDF 편집 어플, 맥 PDF 편집, PDF 필기, PDF 주석, PDF 하이라이트, 무료 PDF 앱, macOS PDF">
+<meta name="description" content="맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지. PDF 병합 및 페이지 순서 변경">
+<meta name="keywords" content="PDF 편집기, PDF 편집 앱, PDF 편집 어플, 맥 PDF 편집, 맥 PDF 뷰어, 미리보기 대체, PDF 병합, PDF 합치기, PDF 페이지 순서 변경, PDF 페이지 정리, PDF 페이지 삭제, PDF 페이지 추가, PDF 필기, PDF 메모, PDF 주석, PDF 하이라이트, PDF 형광펜, PDF 밑줄, PDF 텍스트 추가, PDF에 글쓰기, PDF 이미지 삽입, PDF 검색, PDF OCR, PDF 번역, 무료 PDF 앱, macOS PDF">
 <link rel="canonical" href="https://banggugam.github.io/kkuunPDF/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="kkuunPDF">
 <meta property="og:title" content="kkuunPDF · 맥용 무료 PDF 편집기 · PDF 필기 앱">
-<meta property="og:description" content="맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지.">
+<meta property="og:description" content="맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지. PDF 병합 및 페이지 순서 변경">
 <meta property="og:url" content="https://banggugam.github.io/kkuunPDF/">
 <meta property="og:image" content="https://banggugam.github.io/kkuunPDF/og.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"kkuunPDF","operatingSystem":"macOS 13 이상","applicationCategory":"ProductivityApplication","description":"맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지.","url":"https://banggugam.github.io/kkuunPDF/","downloadUrl":"https://github.com/banggugam/kkuunPDF/releases/latest/download/kkuunPDF.dmg","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Person","name":"반만꾸운감자"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"kkuunPDF","operatingSystem":"macOS 13 이상","applicationCategory":"ProductivityApplication","description":"맥용 무료 PDF 편집기(PDF 편집 앱). 강의자료 PDF에 하이라이트, 밑줄, 펜, 메모를 바로 쓰고 스캔본 자동 OCR 검색, 번역, 페이지 추가·순서 변경까지. PDF 병합 및 페이지 순서 변경","url":"https://banggugam.github.io/kkuunPDF/","downloadUrl":"https://github.com/banggugam/kkuunPDF/releases/latest/download/kkuunPDF.dmg","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"author":{"@type":"Person","name":"반만꾸운감자"}}
 </script>
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,8 +87,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card h3{font-size:22px;font-weight:700;line-height:1.3}
 .card .img{align-self:end;border-radius:12px 12px 0 0;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),0 8px 24px -12px rgba(0,0,0,.18)}
 .card .img img{width:100%}
-.grid .card:not(.wide) .img{align-self:start;height:340px}
-.grid .card:not(.wide) .img img{width:100%;height:auto}
+.grid .card:not(.wide){padding-bottom:28px}
+.grid .card:not(.wide) .img{align-self:start;border-radius:12px}
 .card.wide{grid-column:1/-1;grid-template-columns:1fr 1.6fr;grid-template-rows:none;align-items:end;padding-bottom:0}
 .card.wide .t{align-self:center;padding-bottom:28px}
 .card.plain .img{background:none;box-shadow:none;border-radius:0}
@@ -127,7 +127,6 @@ footer a{color:inherit}
   .grid,.trio{grid-template-columns:1fr}
   .card.wide{grid-template-columns:1fr}
   .card.wide .t{padding-bottom:0}
-  .grid .card:not(.wide) .img{height:240px}
 }
 @media (prefers-reduced-motion:reduce){.btn,.qitem summary::after{transition:none}}
 </style>
