@@ -118,14 +118,14 @@ footer a{color:inherit}
 .qitem summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s ease;flex:none}
 .qitem[open] summary::after{transform:rotate(-135deg)}
 .qitem summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
-.qbody{padding:0 24px 28px;display:grid;gap:22px}
+.qbody{padding:0 24px 28px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
 .qbody>p{color:var(--muted)}
-.qstep{display:grid;gap:12px}
+.qstep{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
 .qstep b{font-weight:600}
 .qstep b em{font-style:normal;color:var(--blue)}
-.qimg{background:var(--card);border-radius:12px;padding:20px;display:grid;place-items:center}
+.qimg{background:var(--card);border-radius:12px;padding:20px;display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;min-width:0}
 .qimg img{border-radius:10px}
-.qimg.sm img{max-width:340px}
+.qimg.sm img{max-width:min(340px,100%)}
 
 @media (max-width:760px){
   .bar .wrap{grid-template-columns:auto 1fr auto}
@@ -140,6 +140,9 @@ footer a{color:inherit}
   .trio{grid-template-columns:1fr}
   .card.wide{grid-template-columns:1fr}
   .card.wide .t{padding-bottom:0}
+  .qitem summary{padding:18px 18px}
+  .qbody{padding:0 18px 22px}
+  .qimg{padding:12px}
 }
 @media (max-width:480px){.dl{grid-template-columns:1fr;gap:18px}}
 @media (max-width:360px){.tab{padding:6px 7px;font-size:13px}.btn.sm{padding:7px 10px}}
@@ -190,7 +193,7 @@ footer a{color:inherit}
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Features</p>
-        <h2>강의자료에 바로 필기하세요.</h2>
+        <h2>강의자료에 바로 필기하십시오.</h2>
       </div>
 
       <div class="hero-shot"><img src="images/main.webp" alt="강의자료에 하이라이트, 밑줄, 펜, 텍스트를 쓴 kkuunPDF 화면" width="1800" height="1394"></div>
@@ -240,7 +243,7 @@ footer a{color:inherit}
       <details class="qitem" open>
         <summary>맥 설치 시 오류</summary>
         <div class="qbody">
-          <p>처음 열 때 "'kkuunPDF'을(를) 열지 않음" 창이 뜨면 아래와 같이 한 번만 허용해 주십시오.</p>
+          <p>처음 열 때 "'kkuunPDF'을(를) 열지 않음" 창이 뜨면 아래와 같이 한 번만 허용해 주세요.</p>
           <div class="qstep">
             <b>1. <em>완료</em>를 누릅니다. 휴지통으로 이동하지 마십시오.</b>
             <div class="qimg sm"><img src="images/qa-blocked.webp" alt="'kkuunPDF'을(를) 열지 않음 경고 창" width="744" height="688" loading="lazy"></div>
@@ -257,7 +260,7 @@ footer a{color:inherit}
       <details class="qitem" style="margin-top:14px">
         <summary>윈도우 설치 시 오류</summary>
         <div class="qbody">
-          <p>설치 파일을 열 때 "Windows의 PC 보호" 창이 뜨면 아래와 같이 실행해 주십시오.</p>
+          <p>설치 파일을 열 때 "Windows의 PC 보호" 창이 뜨면 아래와 같이 실행해 주세요.</p>
           <div class="qstep">
             <b>1. 창 안의 <em>추가 정보</em>를 누릅니다.</b>
           </div>
